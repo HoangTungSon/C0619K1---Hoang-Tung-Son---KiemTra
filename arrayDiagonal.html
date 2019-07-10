@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tong</title>
+</head>
+<body>
+<script>
+    let arr = [[1,2],[3,4]]
+    function sumDiagonal() {
+        let result = 0;
+        for(let i=0, j=0; i<arr.length,j<arr.length;i++, j++){
+                result += arr[i][j]
+        }
+        return result;
+    }
+
+    document.write(sumDiagonal())
+</script>
+</body>
+</html>
