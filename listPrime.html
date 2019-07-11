@@ -6,31 +6,35 @@
 </head>
 <body>
 <script>
-    let arr = [10, 2, 5, 7, 3, 9, 10, 6, 5];
-    let arrPrime = [];
 
-    function isPrime(n) {
-        for (let i = 2; i <= (n - 1); i++) {
-            if (n % i === 0) {
-                return false
+    function isPrime(inputNumber) {
+        let check = false;
+        if(inputNumber === 2){
+            check = true
+        }
+        for( let i = 2; i<=Math.sqrt(inputNumber); i++){
+            if(inputNumber%i === 0){
+                check = false
             } else {
-                return true
+                check = true
             }
         }
+        return check
     }
 
 
-    function listPrime() {
-        for (i = 0; i < arr.length-1; i++) {
-            isPrime(arr[i]);
+    function listPrime(arr) {
+        let arrPrime = []
+        for(let i = 0; i < arr.length; i++){
             if(isPrime(arr[i]) === true){
                 arrPrime.push(arr[i]);
             }
         }
+        return arrPrime;
     }
 
-   listPrime();
-   document.write(arrPrime)
+    let arr =[1,2,4,5,6,7,8,9,5,6,7, 7,8,9]
+   document.write(listPrime(arr));
 
 
 </script>

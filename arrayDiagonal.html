@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-    let arr = [[1,2],[3,4]]
-    function sumDiagonal() {
+    let arrNew = [[1,2],[3,4]]
+    function sumDiagonal(arr) {
         let result = 0;
-        for(let i=0, j=0; i<arr.length,j<arr.length;i++, j++){
-                result += arr[i][j]
+        for(let i=0; i<arr.length;i++){
+                result += arr[i][i]
         }
         return result;
     }
 
-    document.write(sumDiagonal())
+    document.write(sumDiagonal(arrNew))
 </script>
 </body>
 </html>
